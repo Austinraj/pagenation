@@ -1,4 +1,4 @@
-
+  
 function paginate(items, itemsPerPage, paginationContainer) {
     let currentPage = 1;
     const totalPages = Math.ceil(items.length / itemsPerPage);

@@ -27,19 +27,21 @@ http.onreadystatechange = function(){
  if(this.readyState ==4){
    if(this.status == 200){
         const id = JSON.parse(this.responseText);
-        let anws = "";
+        var anws = "";
         id.forEach(({id , name, email}) => {
           //     anws = anws + `<p>Id:${id} Name:${name} Email:${email} `;
-
-              if(id <= 10){
+          
+           
 
                 
-                 anws = anws + `<p>Id:${id} Name:${name} Email:${email} `;
+              anws = anws + `<p>Id:${id} Name:${name} Email:${email} `;
 
-              }
-               if(id <=20 && id >=11){
-                //  anws = anws + `<p>Id:${id} Name:${name} Email:${email} `;
-              }
+           
+          
+              
+              //  if(id <=20 && id >=11){
+              //   //  anws = anws + `<p>Id:${id} Name:${name} Email:${email} `;
+              // }
         });
         show.innerHTML = anws;
 
@@ -63,34 +65,49 @@ http.send();
  const ele = document.body;
  ele.appendChild(bodyEl);
 
-const Ele = document.createElement('a');
+const Ele = document.createElement("button");
 Ele.innerHTML = "Next";
 Ele.setAttribute("id", "page1");
 Ele.setAttribute("class", "a-link");
-Ele.setAttribute("href","#");
 
 
 const nes = document.querySelector("div#page");
 nes.appendChild(Ele);
 
+const Ele1 = document.createElement('button');
+Ele1.innerText = "1";
+Ele1.setAttribute("id", "page2");
+Ele1.onclick = "event";
+nes.append(Ele1);
 
-for(let i=1 ; i<=10; i++){
-    const Ele = document.createElement('a');
-    Ele.innerHTML = i;
-    Ele.setAttribute("class", "a-link");
-    Ele.setAttribute("href","#");
+var a ="";
+ function click1(){
+  if(anws <=10 ){
+    a = a + `<p>Id:${id} Name:${name} Email:${email} `;
+
+  }
+ }
+
+
+
+
+// for(let i=1 ; i<=10; i++){
+//     const Ele = document.createElement('a');
+//     Ele.innerHTML = i;
+//     Ele.setAttribute("class", "a-link");
+//     Ele.setAttribute("href","#");
      
     
-    const nes = document.querySelector("div#page");
-nes.appendChild(Ele);
-}
-const Ele1 = document.createElement('a');
+//     const nes = document.querySelector("div#page");
+// nes.appendChild(Ele);
+// }
+const Ele11 = document.createElement('button');
 
-Ele1.innerHTML = "pevs";
-Ele1.setAttribute("id", "page1");
-Ele1.setAttribute("class", "a-link");
-Ele1.setAttribute("href","#");
+Ele11.innerHTML = "pevs";
+Ele11.setAttribute("id", "page1");
+Ele11.setAttribute("class", "a-link");
 
-nes.appendChild(Ele1);
+
+nes.appendChild(Ele11);
 
 
